@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :camera
-  has_many :pictures
+  has_many :pictures, dependent: :destroy
 
   validates :name, uniqueness: true
 end
