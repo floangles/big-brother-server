@@ -1,0 +1,26 @@
+.pictures-container {
+ 	display: flex; 	
+ 	flex-direction: row;
+ 	flex-wrap: wrap; 	
+ 	&-el {
+ 		position: relative;
+ 		img {
+ 			margin: 5px;
+ 			width: 200px;
+ 			height: 200px;
+ 		}
+ 		&-name {
+			position: absolute;
+    		bottom: 12px;
+    		right: 70px;
+    		color: white;
+ 		}
+ 		&-date {
+			position: absolute;
+		    top: 7px;
+		    left: 12px;
+		    font-size: 11px;
+		    color: white;
+ 		}
+ 	}
+ }
