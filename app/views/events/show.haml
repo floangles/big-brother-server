@@ -1,4 +1,19 @@
-.pictures-container
-	-@pictures.each do |picture|
-		.pictures-container-el
-			= cl_image_tag picture.image
+
+.row
+	.col.s6	
+		= cl_video_tag(@video.image_url.split('/').last(2).join('/').split('.').take(1).first,
+		controls: true, transformation: [height: 360, width: 480, crop: "pad"], quality: 100,
+	 	) if @video
+	
+	.col.s6
+		.carousel-container			
+			.carousel.carousel-slider.center
+				-@pictures.each_with_index do |picture,i|								
+					%a.carousel-item{href: i}
+						= image_tag picture.image
+	
+
+:javascript
+	$(document).ready(function(){
+		$('.carousel.carousel-slider').carousel({fullWidth: true});
+	});

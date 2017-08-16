@@ -14,5 +14,21 @@
  *= require_self
  */
 
+body {
+	background-color: #fafafa
+}
+
+.big-container {
+	margin: 0px 50px;
+  margin-top: 121px;
+}
+
+@import "materialize";
+@import "materialize/extras/nouislider";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+
+
  
 

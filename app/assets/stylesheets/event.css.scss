@@ -3,22 +3,31 @@
  	flex-direction: row;
  	flex-wrap: wrap; 	
  	&-el {
- 		position: relative;
+ 		position: relative; 		
  		img {
- 			margin: 5px;
- 			width: 200px;
+ 			margin: 10px;
+ 			width: 250px;
  			height: 200px;
+ 			border-radius: 5px;
+ 			border: 1px solid rgba(0, 0, 0, 0.06);
  		}
  		&-name {
 			position: absolute;
-    		bottom: 12px;
-    		right: 70px;
+    		bottom: 16px;
+    		right: 100px;
     		color: white;
  		}
  		&-date {
 			position: absolute;
-		    top: 7px;
+		    top: 13px;
 		    left: 12px;
+		    font-size: 11px;
+		    color: white;
+ 		}
+ 		&-day {
+			position: absolute;
+		    top: 13px;
+		    right: 12px;
 		    font-size: 11px;
 		    color: white;
  		}

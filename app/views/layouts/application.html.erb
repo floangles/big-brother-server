@@ -8,6 +8,21 @@
   </head>
 
   <body>
-    <%= yield %>
+  	<nav>
+	    <div class="nav-wrapper">
+	      <a href="#!" class="brand-logo center"><%= image_tag 'logo.jpg', class: 'logo-navbar' %></a>
+	      <ul class="left hide-on-med-and-down">
+	        <li>
+	        	<%= link_to 'Home', events_path %>
+	        </li>
+	        <li>
+	        	<%= link_to 'Maubeuge Live mother fucker', stream_index_path %>
+	        </li>	        
+	      </ul>
+	    </div>
+  	</nav>
+  	<div class='big-container'>  		  	
+    	<%= yield %>
+    </div>
   </body>
 </html>

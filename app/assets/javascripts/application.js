@@ -11,5 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+//= require jquery
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
 //= require_tree .
