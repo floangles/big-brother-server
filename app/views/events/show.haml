@@ -8,6 +8,9 @@
 	.col.s6
 		.carousel-container			
 			.carousel.carousel-slider.center
+				.carousel-fixed-item.center{style: "color: white"}
+					< Slide it >
+				}
 				-@pictures.each_with_index do |picture,i|								
 					%a.carousel-item{href: i}
 						= image_tag picture.image
