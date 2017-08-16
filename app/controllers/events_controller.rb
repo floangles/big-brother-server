@@ -5,8 +5,7 @@ class  EventsController < ApplicationController
   end
 
   def show
-  	event = Event.find(params[:id])
-  	@pictures = event.pictures.select{|a| File.extname(a.image_url) == '.jpg'}
+  	event = Event.find(params[:id])  	
   	@video = event.pictures.select{|a| File.extname(a.image_url) != '.jpg'}.first
   end
 end
