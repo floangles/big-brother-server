@@ -2,7 +2,7 @@
 	- @events.each do |event|
 		.pictures-container-el
 			= link_to event_path(event.id) do				
-				= cl_image_tag event.pictures.last(8).first.try(:image)
+				= image_tag 'cambriolage.jpg'
 				.pictures-container-el-name
 					event n°
 					= event.name
