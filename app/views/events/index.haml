@@ -2,7 +2,7 @@
 	- @events.each do |event|
 		.pictures-container-el
 			= link_to event_path(event.id) do				
-				= image_tag 'cambriolage.jpg'
+				= image_tag ['https://media.giphy.com/media/144MPPghLdJpII/giphy.gif', 'https://media.giphy.com/media/26hitEYGDjIh8HjOg/giphy.gif', 'https://media0.giphy.com/media/Dzmg5QAojwb6M/200.webp#2-grid1', 'https://media0.giphy.com/media/3ornka9rAaKRA2Rkac/200.webp#0-grid1', 'https://media0.giphy.com/media/HP5dest4oOHf2/200.webp#8-grid1', 'https://media3.giphy.com/media/3ohzdYGKrPn8GzgAes/200w.webp#0-grid1', 'https://media3.giphy.com/media/l2Je1o5gGlA6jvUWs/200.webp#5-grid1'].sample
 				.pictures-container-el-name
 					event n°
 					= event.name
