@@ -6,7 +6,7 @@ class  EventsController < ApplicationController
 
   def show
   	event = Event.find(params[:id])  	
-  	@video = Picture.first
+  	@video = event.pictures.select{|a| File.extname(a.image_url) != '.jpg'}.first
   end
 
   def destroy
