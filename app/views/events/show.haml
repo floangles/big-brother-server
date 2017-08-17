@@ -1,10 +1,11 @@
-.delete-button
-	= link_to event_path(@video.event.id), method: :delete do 
-		.waves.effect.waves-light.red.btn
-			%i.material-icons.right			
+- @videos.each do |video|
+	.delete-button
+		= link_to event_path(video.event.id), method: :delete do 
+			.waves.effect.waves-light.red.btn
+				%i.material-icons.right			
+					delete
 				delete
-			delete
-.row
-	.col.s12{style: "text-align: center"}	
-		= cl_video_tag(@video.image_url.split('/').last(2).join('/').split('.').take(1).first, controls: true,transformation: [height: 480, width: 720, crop: "pad"], quality: 100,) if @video
+	.row
+		.col.s12{style: "text-align: center"}	
+			= cl_video_tag(video.image_url.split('/').last(2).join('/').split('.').take(1).first, controls: true,transformation: [height: 480, width: 720, crop: "pad"], quality: 100,) if video
 	
