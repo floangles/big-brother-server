@@ -1,22 +1,10 @@
-
+.delete-button
+	= link_to event_path(@video.event.id), method: :delete do 
+		.waves.effect.waves-light.red.btn
+			%i.material-icons.right			
+				delete
+			delete
 .row
-	.col.s12{style: "text-align: center"}
-		= cl_video_tag(@video.image_url.split('/').last(2).join('/').split('.').take(1).first,
-		controls: true, transformation: [height: 480, width: 720, crop: "pad"], quality: 100,
-	 	) if @video
+	.col.s12{style: "text-align: center"}	
+		= cl_video_tag(@video.image_url.split('/').last(2).join('/').split('.').take(1).first, controls: true,transformation: [height: 480, width: 720, crop: "pad"], quality: 100,) if @video
 	
-	/ .col.s6
-	/ 	.carousel-container			
-	/ 		.carousel.carousel-slider.center
-	/ 			.carousel-fixed-item.center{style: "color: white"}
-	/ 				< Slide it >
-	/ 			}
-	/ 			-@pictures.each_with_index do |picture,i|								
-	/ 				%a.carousel-item{href: i}
-	/ 					= image_tag picture.image
-	
-
-/ :javascript
-/ 	$(document).ready(function(){
-/ 		$('.carousel.carousel-slider').carousel({fullWidth: true});
-/ 	});

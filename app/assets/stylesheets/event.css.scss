@@ -1,11 +1,12 @@
 .pictures-container {
  	display: flex; 	
  	flex-direction: row;
- 	flex-wrap: wrap; 	
+ 	flex-wrap: wrap;
+ 	display: flex;
+  justify-content: space-between;
  	&-el {
  		position: relative; 		
- 		img {
- 			margin: 10px;
+ 		img { 			
  			width: 250px;
  			height: 200px;
  			border-radius: 5px;
@@ -32,4 +33,8 @@
 		    color: white;
  		}
  	}
+ }
+
+ .delete-button {
+ 	text-align: center
  }
