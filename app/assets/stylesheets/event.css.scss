@@ -3,9 +3,10 @@
  	flex-direction: row;
  	flex-wrap: wrap;
  	display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
  	&-el {
- 		position: relative; 		
+ 		position: relative; 
+ 		margin-bottom: 5px;		
  		img { 			
  			width: 250px;
  			height: 200px;
