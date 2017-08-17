@@ -6,8 +6,7 @@
 				.pictures-container-el-name
 					event n°
 					= event.name
-				.pictures-container-el-date
-					= event.created_at.strftime("%I:%M%p")
-					= event.updated_at.strftime("- %I:%M%p")
+				.pictures-container-el-date				
+					= event.updated_at.strftime("%I:%M%p")
 				.pictures-container-el-day
 					= event.created_at.strftime("%d/%m/%y")					
