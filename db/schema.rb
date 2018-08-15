@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170815094850) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cameras", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170815094850) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "camera_id"
+    t.bigint "camera_id"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,8 +34,10 @@ ActiveRecord::Schema.define(version: 20170815094850) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "event_id"
+    t.bigint "event_id"
     t.index ["event_id"], name: "index_pictures_on_event_id"
   end
 
+  add_foreign_key "events", "cameras"
+  add_foreign_key "pictures", "events"
 end
